@@ -3,12 +3,12 @@ import framework.NumbersKihonBase;
 public class NumbersKihon extends NumbersKihonBase {
     @Override
     protected int returnTheMaximumValueOfInt() {
-        return 2147483647;
+        return Integer.MAX_VALUE;
     }
 
     @Override
     protected int returnTheMinimumValueOfInt() {
-        return -2147483648;
+        return Integer.MIN_VALUE;
     }
 
     @Override
@@ -24,6 +24,7 @@ public class NumbersKihon extends NumbersKihonBase {
     @Override
     protected double returnTheMinimumValueOfDouble() {
         return Double.MIN_VALUE;
+
     }
 
     @Override
