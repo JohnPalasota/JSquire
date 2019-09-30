@@ -1,5 +1,7 @@
 import framework.FileOperationsKihonBase;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,7 +14,8 @@ public class FileOperationsKihon extends FileOperationsKihonBase {
 
     @Override
     public void writeContentsToThisFile(Path pathOfFile, String contents) throws IOException {
-        Files.newDirectoryStream()
-        throw new UnsupportedOperationException();
+        Files.write(pathOfFile, contents.getBytes());
+
+
     }
 }
