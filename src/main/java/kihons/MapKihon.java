@@ -36,10 +36,9 @@ public class MapKihon extends MapKihonBase {
 
     @Override
     protected int countUniqueWordsInList(List<String> inputWords) {
-//        return (int)inputWords.stream().distinct().count();
         Map<String,String> count= new HashMap<>();
         for (var member: inputWords){
-            count.put(member,member);
+            count.put(member, member);
         }
         return count.size();
     }
