@@ -3,6 +3,9 @@ package kihons;
 import framework.exceptions.NotImplementedYetException;
 import framework.bases.SqlKihonBase;
 
+import java.sql.SQLData;
+import java.sql.SQLOutput;
+
 public class SqlKihon extends SqlKihonBase {
 
     /* Given SQL Tables defined as:
