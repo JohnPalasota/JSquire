@@ -49,11 +49,11 @@ public class SqlKihon extends SqlKihonBase {
 
     @Override
     protected String insertPersonId4NamedMikeJohnsonAge5ToPerson() {
-        return "INSERT Person (PersonId, FirstName, LastName, Age) VALUES (4, 'Mike', 'Johnson', 5)";
+        return "INSERT INTO Person (PersonId, FirstName, LastName, Age) VALUES (4, 'Mike', 'Johnson', 5)";
     }
 
     @Override
     protected String updateAllLastNamesRayburnToJohnsonInPerson() {
-        throw new NotImplementedYetException();
+        return "UPDATE Person.LastName WHERE LastName = 'Rayburn' TO LastName ='Johnson'";
     }
 }
