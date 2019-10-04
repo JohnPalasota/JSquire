@@ -54,6 +54,6 @@ public class SqlKihon extends SqlKihonBase {
 
     @Override
     protected String updateAllLastNamesRayburnToJohnsonInPerson() {
-        return "UPDATE LastName FROM Person WHERE LastName = 'Rayburn' TO LastName = 'Johnson'";
+        return "UPDATE Person SET LastName = 'Johnson' WHERE LastName = 'Rayburn'";
     }
 }
