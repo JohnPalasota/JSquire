@@ -29,12 +29,12 @@ public class SqlKihon extends SqlKihonBase {
 
     @Override
     protected String Select_All_Fields_And_Rows_From_Person() {
-        throw new NotImplementedYetException();
+        return "SELECT * FROM Person";
     }
 
     @Override
     protected String selectAllFieldsFromPersonJoinedToAddress() {
-        throw new NotImplementedYetException();
+        return "SELECT * FROM Person JOIN Address TO Address.PersonId = Person.PersonId";
     }
 
     @Override
