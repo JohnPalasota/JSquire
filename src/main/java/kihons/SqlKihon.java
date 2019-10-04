@@ -39,21 +39,21 @@ public class SqlKihon extends SqlKihonBase {
 
     @Override
     protected String selectFirstNameFromPersonWhereLastNameEqualsRayburn() {
-        return "SELECT FirstName FROM Person WHERE Lastname = 'Rayburn'";
+        return "SELECT FirstName FROM Person WHERE LastName = 'Rayburn'";
     }
 
     @Override
     protected String selectAllFieldsFromPersonLeftOuterJoinedToAddress() {
-        return "SELECT * Person LEFT PersonId JOIN Address ON Person.PersonId = Address.PersonId";
+        return "SELECT * FROM Person LEFT JOIN Address ON Person.PersonId = Address.PersonId";
     }
 
     @Override
     protected String insertPersonId4NamedMikeJohnsonAge5ToPerson() {
-        throw new NotImplementedYetException();
+        return "INSERT INTO Person (PersonId, FirstName, LastName, Age) VALUES (4, 'Mike', 'Johnson', 5)";
     }
 
     @Override
     protected String updateAllLastNamesRayburnToJohnsonInPerson() {
-        throw new NotImplementedYetException();
+        return "UPDATE LastName FROM Person WHERE LastName = 'Rayburn' TO LastName = 'Johnson'";
     }
 }
