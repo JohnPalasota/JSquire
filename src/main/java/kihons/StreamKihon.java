@@ -36,8 +36,7 @@ public class StreamKihon extends StreamsKihonBase {
     @Override
     protected Item getTheItemWithTheMostCost(List<Item> items) {
         return items.stream()
-                .sorted(Comparator.comparing(i -> i.getCost()))
-                .findFirst()
+                .max(Comparator.comparing(i -> i.getCost()))
                 .orElseThrow();
     }
 
