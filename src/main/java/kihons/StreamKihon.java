@@ -29,7 +29,7 @@ public class StreamKihon extends StreamsKihonBase {
     protected List<Item> sortOnCostFromLestToMostExpensiveAllItemsThatCostLessThanOrEqualToMyMonies(List<Item> items, int monies) {
         return items.stream()
                 .filter(i -> i.getCost() <= monies)
-                .sorted(Comparator.comparing(i -> i.getCost()))
+                .sorted(Comparator.comparing(Item::getCost))
                 .collect(Collectors.toList());
     }
 
