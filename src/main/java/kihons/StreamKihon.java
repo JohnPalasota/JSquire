@@ -51,5 +51,6 @@ public class StreamKihon extends StreamsKihonBase {
     protected void addAllItemsToMyMapWIthKetNameAndValueOfCost(List<Item> items, Map<String, Integer> myMap) {
         items.stream().
                 forEach(i -> myMap.put(i.getName(), i.getCost()));
+
     }
 }
