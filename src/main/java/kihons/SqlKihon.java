@@ -49,7 +49,7 @@ public class SqlKihon extends SqlKihonBase {
 
     @Override
     protected String insertPersonId4NamedMikeJohnsonAge5ToPerson() {
-        return "INSERT TO Person (PersonId, FirstName, LastName, Age) VALUES (4, 'Mike', 'Johnson', 5)";
+        return "INSERT INTO Person (PersonId, FirstName, LastName, Age) VALUES (4, 'Mike', 'Johnson', 5)";
     }
 
     @Override
