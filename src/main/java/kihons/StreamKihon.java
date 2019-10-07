@@ -6,17 +6,18 @@ import framework.exceptions.NotImplementedYetException;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class StreamKihon extends StreamsKihonBase {
 
     @Override
     protected List<String> getTheNamesOfAllItems(List<Item> items) {
-        throw new NotImplementedYetException();
+        return items.stream().map(i -> i.getName()).collect(Collectors.toList());
     }
 
     @Override
     protected List<Item> sortItemsAlphabeticallyBasedOnName(List<Item> items) {
-        throw new NotImplementedYetException();
+        return items.stream().sorted();
     }
 
     @Override
