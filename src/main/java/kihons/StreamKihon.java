@@ -35,7 +35,10 @@ public class StreamKihon extends StreamsKihonBase {
 
     @Override
     protected Item getTheItemWithTheMostCost(List<Item> items) {
-        throw new NotImplementedYetException();
+        return items.stream()
+                .sorted(Comparator.comparing(i -> i.getCost()))
+                .findFirst()
+                .orElseThrow();
     }
 
     @Override
@@ -47,6 +50,7 @@ public class StreamKihon extends StreamsKihonBase {
 
     @Override
     protected void addAllItemsToMyMapWIthKetNameAndValueOfCost(List<Item> items, Map<String, Integer> myMap) {
-        items.stream().forEach((myMap.put(i, b));
+        items.stream().
+                forEach(i -> myMap.put(i.getName(), i.getCost()));
     }
 }
